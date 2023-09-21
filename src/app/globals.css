@@ -2,26 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+	h1 {
+		@apply text-center text-4xl sm:text-4xl;
+	}
+	h2 {
+		@apply text-lg;
+	}
+	h3 {
+		@apply text-lg;
+	}
+	h4 {
+		@apply text-base;
+	}
+	p {
+		@apply text-base;
+	}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+	h1,
+	h2,
+	h3,
+	h4 {
+	}
+	html {
+		font-family: Merriweather;
+	}
+  body{
+    @apply flex min-h-screen bg-gray-100 flex-col items-center justify-between p-24 dark:bg-gray-800 dark:text-gray-50;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.icons-contactme {
+	@apply text-2xl m-2;
 }
+
+.icons-article {
+	@apply m-2;
+}
+
+section {
+	@apply mb-10;
+}
+
+main h2 {
+	@apply uppercase text-2xl text-black;
+}
+
